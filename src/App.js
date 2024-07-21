@@ -1,10 +1,14 @@
+import "./styles/global.scss";
+
 import { Layout, Result } from "antd";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import ContributionPage from "./pages/ContributionPage";
 import EmploymentDetailsPage from "./pages/EmploymentDetailsPage";
-import ErrorBoundary from "./components/error/ErrorBoundary"; // Updated import path
+import ErrorBoundary from "./components/error/ErrorBoundary";
 import FAQPage from "./pages/FAQPage";
+import FeedbackPage from "./pages/Feedback";
+import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import React from "react";
 import WorkingBusinessUnitPage from "./pages/WorkingBusinessUnitPage";
@@ -13,8 +17,8 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Layout.Header>{/* Header content */}</Layout.Header>
-        <Layout.Content>
+        <Header />
+        <Layout.Content style={{ padding: 0, marginTop: 64 }}>
           <ErrorBoundary>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -28,11 +32,11 @@ const App = () => {
                 element={<WorkingBusinessUnitPage />}
               />
               <Route path="/contribution" element={<ContributionPage />} />
+              <Route path="/feedback" element={<FeedbackPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </ErrorBoundary>
         </Layout.Content>
-        <Layout.Footer>{/* Footer content */}</Layout.Footer>
       </Layout>
     </Router>
   );

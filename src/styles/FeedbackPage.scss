@@ -1,0 +1,87 @@
+.feedback-container {
+    background: url('../assets/lloyds-feedback.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed; /* Fix the container to make the background fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .scrollable-content {
+    overflow-y: auto; /* Make the content scrollable */
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 20px 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .tabs-container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.4); /* Adjusted glass effect background for less transparency */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* Light text color for contrast */
+  }
+  
+  .ant-tabs-tab-btn {
+    color: white !important; /* Ensure tab text is white */
+  }
+  
+  .ant-tabs-ink-bar {
+    background-color: #00544f !important; /* Update slider color to #00544f */
+    height: 4px !important; /* Make the slider thicker */
+    border-radius: 2px !important; /* Add rounded corners for a smoother appearance */
+  }
+  
+  .ant-tabs-content-holder {
+    color: white; /* Ensure form text is white */
+  }
+  
+  .ant-form-item-label > label {
+    color: white !important; /* Ensure form labels are white */
+  }
+  
+  .ant-input, .ant-input-textarea {
+    background: rgba(255, 255, 255, 0.9); /* Adjusted glass effect input background for less transparency */
+    color: #333 !important; /* Darker text color for inputs */
+  }
+  
+  .ant-input::placeholder, .ant-input-textarea::placeholder {
+    color: rgba(51, 51, 51, 0.7); /* Darker placeholder text color */
+  }
+  
+  .ant-checkbox-wrapper {
+    color: white !important; /* Ensure checkbox text is white */
+  }
+  
+  .ant-btn-primary {
+    background-color: #00544f !important; /* Update button color to #00544f */
+    border-color: #00544f !important; /* Update button border color to #00544f */
+    color: white; /* White text color */
+  }
+  
+  .ant-btn-primary:hover, .ant-btn-primary:focus {
+    background-color: #003d3a !important; /* Darker green on hover */
+    border-color: #003d3a !important; /* Darker green border on hover */
+  }

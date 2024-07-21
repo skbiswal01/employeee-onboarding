@@ -1,0 +1,95 @@
+.home-container {
+    background: url('../assets/lloyds-horse.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the background stays fixed */
+    position: fixed; /* Makes the container fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents overflow */
+  }
+  
+  .scrollable-content {
+    overflow-y: auto; /* Makes the content scrollable */
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 20px 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  .card-column {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+    height: 400px; /* Ensures all cards have the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure content does not overflow the card */
+  }
+  
+  .glass-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .ant-card-head-title {
+    color: white !important; /* Force the title color to white */
+  }
+  
+  .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
