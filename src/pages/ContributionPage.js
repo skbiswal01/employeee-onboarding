@@ -1,41 +1,45 @@
-import { Button, Form, Input, Upload } from "antd";
+import "../styles/ContributionPage.scss";
 
+import ActionModal from "../components/contribution/ActionModal";
+import { Layout } from "antd";
+import ManagerActions from "../components/contribution/ManagerAction";
 import React from "react";
+import UploadResource from "../components/contribution/UploadResource";
+import ViewResources from "../components/contribution/ViewResource";
+import { useSelector } from "react-redux";
 
 const ContributionPage = () => {
-  const [form] = Form.useForm();
+  const userRole = useSelector((state) => state.user.role); // Fetch user role from Redux store
+  const userStatus = useSelector((state) => state.user.status);
 
-  const onFinish = (values) => {
-    console.log("Success:", values);
-  };
+  if (userStatus === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  //   if (userStatus === "failed") {
+  //     return <div>Error loading user details</div>;
+  //   }
 
   return (
-    <Form form={form} onFinish={onFinish}>
-      <Form.Item
-        label="Title"
-        name="title"
-        rules={[{ required: true, message: "Please input the title!" }]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        label="Description"
-        name="description"
-        rules={[{ required: true, message: "Please input the description!" }]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item label="File Upload" name="file">
-        <Upload>
-          <Button>Click to Upload</Button>
-        </Upload>
-      </Form.Item>
-      <Form.Item>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
-      </Form.Item>
-    </Form>
+    <Layout.Content className="contribution-page">
+      <div className="contribution-container">
+        <div className="scrollable-content">
+          <h1 className="page-title">Contribution Page</h1>
+          <div className="content-container">
+            <div className="left-panel">
+              <UploadResource />
+              <ViewResources />
+            </div>
+            {userRole === "manager" && (
+              <div className="right-panel">
+                <ManagerActions />
+              </div>
+            )}
+          </div>
+          <ActionModal />
+        </div>
+      </div>
+    </Layout.Content>
   );
 };
 

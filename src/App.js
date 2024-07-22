@@ -1,19 +1,29 @@
 import "./styles/global.scss";
 
 import { Layout, Result } from "antd";
+import React, { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
+import BusinessUnitPage from "./pages/BusinessUnitPage";
 import ContributionPage from "./pages/ContributionPage";
-import EmploymentDetailsPage from "./pages/EmploymentDetailsPage";
+import EmployeeDetailsPage from "./pages/EmployeeDetailsPage";
 import ErrorBoundary from "./components/error/ErrorBoundary";
 import FAQPage from "./pages/FAQPage";
 import FeedbackPage from "./pages/Feedback";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
-import React from "react";
-import WorkingBusinessUnitPage from "./pages/WorkingBusinessUnitPage";
+import { fetchUserDetails } from "./features/user/userSlice";
 
 const App = () => {
+  const dispatch = useDispatch();
+  const userStatus = useSelector((state) => state.user.status);
+
+  useEffect(() => {
+    if (userStatus === "idle") {
+      dispatch(fetchUserDetails());
+    }
+  }, [userStatus, dispatch]);
   return (
     <Router>
       <Layout>
@@ -25,11 +35,11 @@ const App = () => {
               <Route path="/faq" element={<FAQPage />} />
               <Route
                 path="/employment-details"
-                element={<EmploymentDetailsPage />}
+                element={<EmployeeDetailsPage />}
               />
               <Route
                 path="/working-bu-details"
-                element={<WorkingBusinessUnitPage />}
+                element={<BusinessUnitPage />}
               />
               <Route path="/contribution" element={<ContributionPage />} />
               <Route path="/feedback" element={<FeedbackPage />} />

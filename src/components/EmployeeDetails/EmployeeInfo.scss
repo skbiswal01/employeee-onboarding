@@ -1,0 +1,30 @@
+.employee-info-card-unique {
+    background: #004d40;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 77, 64, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .employee-photo-container-unique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .upload-button-unique {
+    background-color: #00544f !important;
+    border-color: #00544f !important;
+    color: #fff;
+  }
+  
+  .upload-button-unique:hover,
+  .upload-button-unique:focus {
+    background-color: #003d3a !important;
+    border-color: #003d3a !important;
+  }

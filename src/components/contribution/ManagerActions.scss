@@ -1,0 +1,20 @@
+.manager-actions-card {
+  
+    .action-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      color: white;
+    }
+  
+    .action-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  
+    .action-item + .action-item {
+      margin-top: 10px;
+    }
+  }

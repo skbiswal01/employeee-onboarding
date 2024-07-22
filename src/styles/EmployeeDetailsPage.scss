@@ -1,0 +1,105 @@
+.employee-details-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin-top: 60px;
+}
+
+.scrollable-content-unique {
+  overflow-y: auto;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.page-heading-unique {
+  color: #00544f;
+  text-align: center;
+}
+
+.left-panel-container-unique {
+  width: 30%; /* Left panel only occupies 30% */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel-container-unique {
+  width: 70%;
+}
+
+.employee-info-card-unique,
+.essential-skills-card-unique,
+.hierarchy-diagram-card-unique,
+.upskill-card-unique {
+  background: #004d40;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 77, 64, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+.skill-item-unique {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-slider-unique {
+  width: 100%;
+}
+
+.upskill-link-unique {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.upskill-link-unique a {
+  color: #00544f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.upskill-link-unique a:hover {
+  text-decoration: underline;
+}
+
+.upskill-container-unique {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.upskill-platform-card-unique {
+  flex: 1 1 calc(50% - 10px); /* 2 cards per row */
+  background: #004d40;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 77, 64, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.upskill-platform-card-unique:hover {
+  transform: scale(1.05);
+}
