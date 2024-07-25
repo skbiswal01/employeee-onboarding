@@ -3,7 +3,6 @@ import "../../styles/FeedbackPage.scss";
 import GeneralFeedbackForm from "./GeneralFeedbackForm";
 import React from "react";
 import SpecificFeedbackForm from "./SpecificFeedbackForm";
-import SurveysPollsForm from "./SurveysPollsForm";
 import { Tabs } from "antd";
 
 const { TabPane } = Tabs;

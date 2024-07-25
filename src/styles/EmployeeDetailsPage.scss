@@ -38,6 +38,9 @@
 
 .right-panel-container-unique {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .employee-info-card-unique,

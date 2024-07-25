@@ -1,0 +1,59 @@
+.buddy-mapping-card-unique {
+    background: #004d40;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 77, 64, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .buddy-mapping-title-unique {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .ant-table {
+    background: transparent;
+  }
+  
+  .ant-table-thead > tr > th {
+    background: #004d40;
+    color: #fff;
+  }
+  
+  .ant-table-tbody > tr > td {
+    background: transparent;
+  }
+  
+  .ant-modal-content {
+    background: #004d40;
+  }
+  
+  .ant-modal-footer {
+    border-top: none;
+  }
+  
+  .ant-btn-primary {
+    background-color: #00544f;
+    border-color: #00544f;
+  }
+  
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    background-color: #003d3a;
+    border-color: #003d3a;
+  }
+
+  // EmployeeDetailsPage.scss
+.highlight-row {
+    background-color: #00796b !important;
+    color: #fff;
+    
+  }
+
+  .highlight-row:hover {
+    background-color: #004d40 !important; /* Darker shade on hover */
+    color: black;
+  }
