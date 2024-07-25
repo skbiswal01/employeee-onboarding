@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input,Radio } from "antd";
 
 import React from "react";
 
@@ -14,13 +14,27 @@ const SpecificFeedbackForm = () => {
         name="aspects"
         rules={[{ required: true, message: "Please select specific aspects!" }]}
       >
-        <Checkbox.Group>
+        {/* <Checkbox.Group>
           <Checkbox value="Recruitment Process">Recruitment Process</Checkbox>
           <Checkbox value="First Day Experience">First Day Experience</Checkbox>
           <Checkbox value="Training Sessions">Training Sessions</Checkbox>
           <Checkbox value="Tools Provided">Tools Provided</Checkbox>
           <Checkbox value="Overall Experience">Overall Experience</Checkbox>
-        </Checkbox.Group>
+        </Checkbox.Group> */}
+      <Radio.Group>
+        <Radio value="Recruitment Process">Recruitment Process</Radio>
+        <Radio value="First Day Experience">First Day Experience</Radio>
+        <Radio value="Training Sessions">Training Sessions</Radio>
+        <Radio value="Tools Provided">Tools Provided</Radio>
+        <Radio value="Overall Experience">Overall Experience</Radio>
+      </Radio.Group>
+      </Form.Item>
+      <Form.Item
+        label="Email"
+        name="email"
+        rules={[{ required: true, message: "Please input your email!" }]}
+      >
+        <Input.TextArea rows={1} />
       </Form.Item>
       <Form.Item
         label="Feedback"

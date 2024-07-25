@@ -3,6 +3,7 @@ import "../styles/EmployeeDetailsPage.scss";
 import EmployeeInfo from "../components/EmployeeDetails/EmployeeInfo";
 import EssentialSkills from "../components/EmployeeDetails/EssentialSkills";
 import HierarchyDiagram from "../components/EmployeeDetails/HierarchyDiagram";
+import SkillMatrix from "../components/EmployeeDetails/SkillMatrix";
 import React from "react";
 import Upskill from "../components/EmployeeDetails/Upskill";
 
@@ -14,10 +15,11 @@ const EmployeeDetailsPage = () => {
         <div className="left-panel-container-unique">
           <EmployeeInfo />
           <EssentialSkills />
+          <SkillMatrix />
           <Upskill />
         </div>
         <div className="right-panel-container-unique">
-          <HierarchyDiagram />
+          {/* <HierarchyDiagram /> */}
         </div>
       </div>
     </div>
@@ -25,3 +27,5 @@ const EmployeeDetailsPage = () => {
 };
 
 export default EmployeeDetailsPage;
+
+

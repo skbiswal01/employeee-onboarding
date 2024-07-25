@@ -166,3 +166,6 @@ export const selectFaqStatus = (state) => state.faq.status;
 export const selectFaqError = (state) => state.faq.error;
 
 export default faqSlice.reducer;
+
+
+

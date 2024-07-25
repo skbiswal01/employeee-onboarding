@@ -36,15 +36,28 @@ const UploadResource = () => {
   return (
     <Card title="Upload Resource" className="upload-card">
       <Form form={form} onFinish={onFinish} layout="vertical">
-        <Form.Item
+      <Form.Item
           name="category"
           label="Category"
           rules={[{ required: true, message: "Please select a category" }]}
         >
           <Select placeholder="Select a category" onClick={stopPropagation}>
-            <Option value="Category1">Category1</Option>
-            <Option value="Category2">Category2</Option>
-            <Option value="Category3">Category3</Option>
+            <Option value="Category1">Business Unit</Option>
+            <Option value="Category2">Platform</Option>
+            <Option value="Category3">Lab</Option>
+            <Option value="Category3">Feature Team</Option>
+          </Select>
+        </Form.Item>
+        <Form.Item
+          name="category"
+          label="File Type"
+          rules={[{ required: true, message: "Please select a File Type" }]}
+        >
+          <Select placeholder="Select a category" onClick={stopPropagation}>
+            <Option value="Category1">Link</Option>
+            <Option value="Category2">Video</Option>
+            <Option value="Category3">Image</Option>
+            <Option value="Category3">Document</Option>
           </Select>
         </Form.Item>
         <Form.Item

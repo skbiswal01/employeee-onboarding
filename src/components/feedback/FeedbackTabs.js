@@ -24,9 +24,6 @@ const FeedbackTabs = () => {
             <TabPane tab="Specific Feedback" key="2">
               <SpecificFeedbackForm />
             </TabPane>
-            <TabPane tab="Surveys and Polls" key="3">
-              <SurveysPollsForm />
-            </TabPane>
           </Tabs>
         </div>
       </div>
